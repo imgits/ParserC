@@ -74,6 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -110,6 +111,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="Readme.txt" />
+    <Text Include="Result.txt" />
+    <Text Include="wenfa.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LexAnalysis.h" />
+    <ClInclude Include="SynAnalysis.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LexAnalysis.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SynAnalysis.cpp" />
+    <ClCompile Include="test.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
